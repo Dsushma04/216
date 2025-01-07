@@ -1,0 +1,14 @@
+def girlcr():
+    print("welcome to mango city")
+  
+def boycr():
+    print("college is too cool")
+  
+def balaji(age):
+    print("all the best", age)
+
+girlcr()
+boycr()
+
+age = 20
+balaji(age)

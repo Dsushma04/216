@@ -1,0 +1,22 @@
+def stringMatching(words):
+    result = set()  # To store substrings found in other words
+    
+    # Compare each word with every other word
+    for i in range(len(words)):
+        for j in range(len(words)):
+            if i != j:  # Don't compare the word with itself
+                if words[i] in words[j]:  # Check if words[i] is a substring of words[j]
+                    result.add(words[i])  # Add the substring to the result set
+                    result.add(words[j])  # Also add the string that contains the substring
+
+    return list(result)  # Convert set to list and return
+
+# Example usage:
+words1 = ["mass", "as", "hero", "superhero"]
+words2 = ["leetcode", "et", "code"]
+words3 = ["blue", "green", "bu"]
+
+# Output the results for each example
+print(stringMatching(words1))  # Expected output: ["mass", "as", "hero", "superhero"]
+print(stringMatching(words2))  # Expected output: ["leetcode", "et", "code"]
+print(stringMatching(words3))  # Expected output: ["blue", "green", "bu"]
